@@ -1,0 +1,167 @@
+Automated test report (unittest)
+Time: 2026-11-14T05:44:01
+Python: 3.10.11 (Windows-10-10.0.26200-SP0)
+
+Total 142 tests | passed 142 | failed 0 | errors 0 | skipped 0
+Summary: all tests passed
+
+By test file:
+  tests.test_cli_csv            17 tests  all passed
+  tests.test_edge_cases         15 tests  all passed
+  tests.test_experiments         9 tests  all passed
+  tests.test_hotel              34 tests  all passed
+  tests.test_modn                7 tests  all passed
+  tests.test_oracle              3 tests  all passed
+  tests.test_random_consistency   3 tests  all passed
+  tests.test_ring               29 tests  all passed
+  tests.test_room                7 tests  all passed
+  tests.test_store              18 tests  all passed
+
+Per-test details:
+test_demo_runs_to_completion (tests.test_cli_csv.CliTests) ... ok
+test_end_of_input_exits_cleanly (tests.test_cli_csv.CliTests) ... ok
+test_every_bad_input_is_handled (tests.test_cli_csv.CliTests) ... ok
+test_export_migrations_before_any_building_change_is_refused (tests.test_cli_csv.CliTests) ... ok
+test_export_to_unwritable_path_is_reported_not_raised (tests.test_cli_csv.CliTests) ... ok
+test_full_session_without_crash (tests.test_cli_csv.CliTests) ... ok
+test_init_accepts_different_guest_counts_per_channel (tests.test_cli_csv.CliTests) ... ok
+test_init_rejects_bad_per_channel_lists_without_replacing_system (tests.test_cli_csv.CliTests) ... ok
+test_last_building_cannot_be_removed_via_menu (tests.test_cli_csv.CliTests) ... ok
+test_main_entry_point_flags (tests.test_cli_csv.CliTests) ... ok
+test_measure_menu_reports_parameters (tests.test_cli_csv.CliTests) ... ok
+test_empty_system_writes_header_only (tests.test_cli_csv.CsvExportTests) ... ok
+test_file_is_utf8_and_creates_missing_folders (tests.test_cli_csv.CsvExportTests) ... ok
+test_guest_csv_content_and_columns (tests.test_cli_csv.CsvExportTests) ... ok
+test_guest_csv_row_count_equals_guest_count (tests.test_cli_csv.CsvExportTests) ... ok
+test_migration_csv_matches_reported_count (tests.test_cli_csv.CsvExportTests) ... ok
+test_row_count_stays_equal_after_changes (tests.test_cli_csv.CsvExportTests) ... ok
+test_clone_is_independent_of_the_original (tests.test_edge_cases.RobustnessTests) ... ok
+test_find_by_room_with_odd_argument_types_is_a_rejection (tests.test_edge_cases.RobustnessTests) ... ok
+test_huge_batch_is_rejected_immediately_without_hanging (tests.test_edge_cases.RobustnessTests) ... ok
+test_initialize_rejects_oversized_or_failed_setup_instead_of_silently_dropping_guests (tests.test_edge_cases.RobustnessTests) ... ok
+test_mod_n_baseline_validates_group_arguments_too (tests.test_edge_cases.RobustnessTests) ... ok
+test_add_duplicate_guest_is_rejected (tests.test_edge_cases.Section45EdgeCases) ... ok
+test_add_existing_building_is_rejected (tests.test_edge_cases.Section45EdgeCases) ... ok
+test_cannot_remove_the_last_building_even_when_empty (tests.test_edge_cases.Section45EdgeCases) ... ok
+test_mod_n_baseline_has_same_rejections (tests.test_edge_cases.Section45EdgeCases) ... ok
+test_no_guests_k_zero (tests.test_edge_cases.Section45EdgeCases) ... ok
+test_rejected_commands_leave_system_consistent_after_a_barrage (tests.test_edge_cases.Section45EdgeCases) ... ok
+test_remove_missing_building_is_rejected_and_reports_nothing (tests.test_edge_cases.Section45EdgeCases) ... ok
+test_remove_missing_guest_does_not_change_count (tests.test_edge_cases.Section45EdgeCases) ... ok
+test_search_not_found_is_clear_message (tests.test_edge_cases.Section45EdgeCases) ... ok
+test_stats_with_no_buildings_or_guests_never_divide_by_zero (tests.test_edge_cases.Section45EdgeCases) ... ok
+test_a_rows_and_fields (tests.test_experiments.ExperimentTests) ... ok
+test_b_is_reproducible_with_same_salts (tests.test_experiments.ExperimentTests) ... ok
+test_b_methods_agree_and_mod_n_moves_far_more (tests.test_experiments.ExperimentTests) ... ok
+test_c_counts_and_cv (tests.test_experiments.ExperimentTests) ... ok
+test_run_all_quick_writes_csv_and_figures (tests.test_experiments.ExperimentTests) ... ok
+test_measure_memory_current_and_peak (tests.test_experiments.HelperTests) ... ok
+test_median (tests.test_experiments.HelperTests) ... ok
+test_split_evenly_spread_at_most_one (tests.test_experiments.HelperTests) ... ok
+test_summarize_groups_and_statistics (tests.test_experiments.HelperTests) ... ok
+test_arrival_order_does_not_change_address (tests.test_hotel.AddingGuestsTests) ... ok
+test_existing_addresses_unchanged_after_adding_old_and_new_channels (tests.test_hotel.AddingGuestsTests) ... ok
+test_group_overlap_by_only_one_guest_is_rejected (tests.test_hotel.AddingGuestsTests) ... ok
+test_group_overlap_rejects_whole_group_and_keeps_data (tests.test_hotel.AddingGuestsTests) ... ok
+test_invalid_input_rejected_without_exception (tests.test_hotel.AddingGuestsTests) ... ok
+test_no_two_guests_share_an_address (tests.test_hotel.AddingGuestsTests) ... ok
+test_readding_removed_guest_is_a_fresh_stay_computed_from_current_ring (tests.test_hotel.AddingGuestsTests) ... ok
+test_remove_guest_updates_all_lookups (tests.test_hotel.AddingGuestsTests) ... ok
+test_room_numbers_are_formula_values (tests.test_hotel.AddingGuestsTests) ... ok
+test_zero_count_changes_nothing (tests.test_hotel.AddingGuestsTests) ... ok
+test_add_building_movers_go_only_to_new_building (tests.test_hotel.BuildingChangeTests) ... ok
+test_add_then_remove_same_building_restores_everything (tests.test_hotel.BuildingChangeTests) ... ok
+test_expected_move_rates_are_in_the_right_range (tests.test_hotel.BuildingChangeTests) ... ok
+test_last_migration_is_kept (tests.test_hotel.BuildingChangeTests) ... ok
+test_method_a_and_b_give_identical_reports (tests.test_hotel.BuildingChangeTests) ... ok
+test_method_can_be_chosen_per_call (tests.test_hotel.BuildingChangeTests) ... ok
+test_remove_building_only_its_guests_move (tests.test_hotel.BuildingChangeTests) ... ok
+test_remove_then_add_same_building_restores_everything (tests.test_hotel.BuildingChangeTests) ... ok
+test_report_count_equals_printed_records (tests.test_hotel.BuildingChangeTests) ... ok
+test_timings_recorded_per_step (tests.test_hotel.BuildingChangeTests) ... ok
+test_channels_start_at_one_and_counts_per_channel (tests.test_hotel.InitializationTests) ... ok
+test_invalid_parameters_raise_value_error (tests.test_hotel.InitializationTests) ... ok
+test_same_salt_same_result_different_salt_different_ring (tests.test_hotel.InitializationTests) ... ok
+test_sizes (tests.test_hotel.InitializationTests) ... ok
+test_compute_building_uses_ring_only (tests.test_hotel.LookupAndListingTests) ... ok
+test_load_report_includes_empty_buildings (tests.test_hotel.LookupAndListingTests) ... ok
+test_not_found_is_a_result_not_an_exception (tests.test_hotel.LookupAndListingTests) ... ok
+test_occupied_rooms_sorted_by_node_then_numeric_room (tests.test_hotel.LookupAndListingTests) ... ok
+test_two_way_search_agree (tests.test_hotel.LookupAndListingTests) ... ok
+test_adding_D_at_35_moves_exactly_two_guests (tests.test_hotel.SmallRingExampleTests) ... ok
+test_guests_outside_affected_range_do_not_move (tests.test_hotel.SmallRingExampleTests) ... ok
+test_initial_state_matches_table (tests.test_hotel.SmallRingExampleTests) ... ok
+test_removing_B_moves_exactly_three_guests (tests.test_hotel.SmallRingExampleTests) ... ok
+test_wrap_around_guest_goes_to_first_point (tests.test_hotel.SmallRingExampleTests) ... ok
+test_add_appends_and_remove_keeps_remaining_order (tests.test_modn.ModNTests) ... ok
+test_choose_by_index_of_hash_mod_n (tests.test_modn.ModNTests) ... ok
+test_constructor_rejects_bad_ids (tests.test_modn.ModNTests) ... ok
+test_load_counts_include_empty_buildings (tests.test_modn.ModNTests) ... ok
+test_mod_n_moves_almost_everyone_when_adding_one_building (tests.test_modn.ModNTests) ... ok
+test_moves_are_counted_by_real_building_id_not_index (tests.test_modn.ModNTests) ... ok
+test_same_guests_hashes_and_buildings_as_ring (tests.test_modn.ModNTests) ... ok
+test_formula_equals_walking_the_diagonals (tests.test_oracle.CantorOracleTests) ... ok
+test_every_command_matches_naive_owners_and_movers (tests.test_oracle.MigrationOracleTests) ... ok
+test_locate_equals_naive_definition (tests.test_oracle.RingOracleTests) ... ok
+test_every_migration_follows_the_rules (tests.test_random_consistency.RandomConsistencyTests) ... ok
+test_heavy_collisions_small_position_space (tests.test_random_consistency.RandomConsistencyTests) ... ok
+test_real_sha256_hashing (tests.test_random_consistency.RandomConsistencyTests) ... ok
+test_random_rings_with_heavy_collisions (tests.test_ring.ArcTests) ... ok
+test_ring_with_collisions (tests.test_ring.ArcTests) ... ok
+test_simple_ring (tests.test_ring.ArcTests) ... ok
+test_single_point_covers_whole_ring (tests.test_ring.ArcTests) ... ok
+test_colliding_points_are_all_kept_and_sorted_by_position_node_j (tests.test_ring.CollisionTests) ... ok
+test_guest_at_collided_position_uses_first_point_in_key_order (tests.test_ring.CollisionTests) ... ok
+test_many_guests_can_share_a_position (tests.test_ring.CollisionTests) ... ok
+test_virtual_nodes_of_same_node_colliding_ordered_by_j (tests.test_ring.CollisionTests) ... ok
+test_golden_values_never_change (tests.test_ring.HashingTests) ... ok
+test_guest_and_node_strings_are_distinct (tests.test_ring.HashingTests) ... ok
+test_matches_sha256_first_8_bytes_big_endian (tests.test_ring.HashingTests) ... ok
+test_position_range (tests.test_ring.HashingTests) ... ok
+test_salt_prefix_rule (tests.test_ring.HashingTests) ... ok
+test_same_value_in_new_processes_with_different_pythonhashseed (tests.test_ring.HashingTests) ... ok
+test_after_last_point_wraps_to_first (tests.test_ring.LocateTests) ... ok
+test_before_first_point (tests.test_ring.LocateTests) ... ok
+test_between_points_goes_to_next_point (tests.test_ring.LocateTests) ... ok
+test_empty_ring_raises_lookup_error (tests.test_ring.LocateTests) ... ok
+test_exactly_on_a_point (tests.test_ring.LocateTests) ... ok
+test_single_node_owns_everything (tests.test_ring.LocateTests) ... ok
+test_add_node_only_adds_its_own_points (tests.test_ring.MembershipTests) ... ok
+test_add_then_remove_restores_ring (tests.test_ring.MembershipTests) ... ok
+test_batch_add_is_all_or_nothing (tests.test_ring.MembershipTests) ... ok
+test_cannot_remove_last_node (tests.test_ring.MembershipTests) ... ok
+test_duplicate_add_rejected_without_change (tests.test_ring.MembershipTests) ... ok
+test_invalid_v_rejected (tests.test_ring.MembershipTests) ... ok
+test_point_count_is_n_times_v (tests.test_ring.MembershipTests) ... ok
+test_remove_missing_node_rejected (tests.test_ring.MembershipTests) ... ok
+test_remove_node_removes_all_its_points_and_nothing_else (tests.test_ring.MembershipTests) ... ok
+test_big_integers_are_exact (tests.test_room.RoomNumberTests) ... ok
+test_distinct_guests_get_distinct_rooms (tests.test_room.RoomNumberTests) ... ok
+test_first_rooms_have_no_gaps (tests.test_room.RoomNumberTests) ... ok
+test_invalid_ids_rejected (tests.test_room.RoomNumberTests) ... ok
+test_inverse_round_trip (tests.test_room.RoomNumberTests) ... ok
+test_returns_exact_int_not_float (tests.test_room.RoomNumberTests) ... ok
+test_table_from_assignment (tests.test_room.RoomNumberTests) ... ok
+test_add_and_lookup_both_ways (tests.test_store.GuestStoreTests) ... ok
+test_batch_merge_keeps_position_index_sorted (tests.test_store.GuestStoreTests) ... ok
+test_duplicate_in_store_rejects_whole_batch (tests.test_store.GuestStoreTests) ... ok
+test_duplicate_inside_batch_rejected (tests.test_store.GuestStoreTests) ... ok
+test_guests_in_arcs_returns_only_guests_in_range_inclusive (tests.test_store.GuestStoreTests) ... ok
+test_guests_in_arcs_with_same_position_guests (tests.test_store.GuestStoreTests) ... ok
+test_invalid_id_in_batch_leaves_store_untouched (tests.test_store.GuestStoreTests) ... ok
+test_move_changes_node_but_keeps_room_and_updates_indexes (tests.test_store.GuestStoreTests) ... ok
+test_remove_missing_returns_none_and_changes_nothing (tests.test_store.GuestStoreTests) ... ok
+test_remove_updates_every_index (tests.test_store.GuestStoreTests) ... ok
+test_removing_all_guests_of_a_node_drops_its_count (tests.test_store.GuestStoreTests) ... ok
+test_room_number_is_formula_not_arrival_order (tests.test_store.GuestStoreTests) ... ok
+test_sorted_rooms_numeric_order_not_text_order (tests.test_store.GuestStoreTests) ... ok
+test_validate_detects_corruption (tests.test_store.GuestStoreTests) ... ok
+test_basic_values_include_zero_buildings (tests.test_store.LoadStatsTests) ... ok
+test_no_buildings_does_not_divide_by_zero (tests.test_store.LoadStatsTests) ... ok
+test_no_guests_gives_zeros_and_no_cv (tests.test_store.LoadStatsTests) ... ok
+test_perfectly_balanced (tests.test_store.LoadStatsTests) ... ok
+
+----------------------------------------------------------------------
+Ran 142 tests in 10.741s
+
+OK
